@@ -156,7 +156,7 @@
         you have some more memory to waste. If you deal with lots of 
         collections, you can also increase the collectionCacheSize value 
     -->
-    <db-connection cacheSize="128M" checkMaxCacheSize="true" collectionCache="24M" database="native"
+    <db-connection cacheSize="1024M" checkMaxCacheSize="true" collectionCache="64M" database="native"
         files="data" pageSize="4096" nodesBuffer="1000" cacheShrinkThreshold="10000"
         doc-ids="default" minDiskSpace="128M">
 
@@ -657,6 +657,13 @@
     <transformer class="net.sf.saxon.TransformerFactoryImpl" caching="yes">
         <attribute name="http://saxon.sf.net/feature/version-warning" value="false" type="boolean"/>
     </transformer>
+
+    <!--
+    <transformer class="com.saxonica.config.EnterpriseTransformerFactory" caching="yes">
+        <attribute name="http://saxon.sf.net/feature/licenseFileLocation" value="lib/user/saxon-license.lic" type="string"/>
+        <attribute name="http://saxon.sf.net/feature/version-warning" value="false" type="boolean"/>
+    </transformer>
+    -->
 
     <!--
         Settings for XML validation
