@@ -35,11 +35,11 @@
     <Arg>
       <New class="org.eclipse.jetty.server.nio.SelectChannelConnector">
         <Set name="host"><SystemProperty name="jetty.host"/></Set>
-        <Set name="port"><SystemProperty name="jetty.port" default="8080"/></Set>
+        <Set name="port"><SystemProperty name="jetty.port" default="8090"/></Set>
         <Set name="maxIdleTime">300000</Set>
         <Set name="Acceptors">2</Set>
         <Set name="statsOn">false</Set>
-        <Set name="confidentialPort"><SystemProperty name="jetty.port.ssl" default="8443"/></Set>
+        <Set name="confidentialPort"><SystemProperty name="jetty.port.ssl" default="8451"/></Set>
         <Set name="lowResourcesConnections">20000</Set>
         <Set name="lowResourcesMaxIdleTime">5000</Set>
       </New>
@@ -56,7 +56,7 @@
           <Item>
             <New id="exist-webapp-context" class="org.exist.jetty.WebAppContext">
               <!-- can either be '/exist' or '/' -->
-              <Set name="contextPath">/exist</Set>
+              <Set name="contextPath">/</Set>
               <Set name="war"><SystemProperty name="jetty.home" default="."/>/../../webapp/</Set>
               <Set name="defaultsDescriptor"><SystemProperty name="jetty.home" default="."
                 />/etc/webdefault.xml</Set>
@@ -220,7 +220,7 @@
             <Set name="trustStorePassword">secret</Set>
           </New>
         </Arg>
-        <Set name="Port"><SystemProperty name="jetty.port.ssl" default="8443"/></Set>
+        <Set name="Port"><SystemProperty name="jetty.port.ssl" default="8451"/></Set>
         <Set name="maxIdleTime">30000</Set>
         <!-- 
            <Set name="Acceptors">2</Set>

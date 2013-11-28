@@ -86,7 +86,7 @@ set_client_java_options() {
 
 set_java_options() {
     if [ -z "${JAVA_OPTIONS}" ]; then
-	JAVA_OPTIONS="-Xms128m -Xmx1024m -Dfile.encoding=UTF-8";
+	JAVA_OPTIONS="-Xms1024m -Xmx8192m -Dfile.encoding=UTF-8";
     fi
     JAVA_OPTIONS="${JAVA_OPTIONS} -Djava.endorsed.dirs=${JAVA_ENDORSED_DIRS}";
 }
