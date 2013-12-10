@@ -3,26 +3,30 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fetch-run</groupId>
 	<artifactId>fetch-run</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
+	
+	<properties>
+		<eXist.version>2.1</eXist.version>
+	</properties>
 
 	<dependencies>
 		<!-- eXistDB Library -->
 		<dependency>
 			<groupId>org.exist-db</groupId>
 			<artifactId>existdb-core</artifactId>
-			<version>2.0</version>
+			<version>${eXist.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.exist-db</groupId>
 			<artifactId>existdb-start</artifactId>
-			<version>2.0</version>
+			<version>${eXist.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.exist-db</groupId>
 			<artifactId>existdb-optional</artifactId>
-			<version>2.0</version>
+			<version>${eXist.version}</version>
 		</dependency>
 
 	</dependencies>
